@@ -1,9 +1,12 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist } from "next/font/google"
+import { Geist } from "next/font/google";
 import "./globals.css"
 
-const _geistSans = Geist({ subsets: ["latin"] })
+const geistSans = Geist({
+  variable: "--font-sans",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "MovieFlix - Discover & Search Movies",
@@ -17,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`font-sans antialiased ${_geistSans.className}`}>
+      <body className={`${geistSans.variable} font-sans antialiased bg-background text-foreground`}>
         {children}
       </body>
     </html>

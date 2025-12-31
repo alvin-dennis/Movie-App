@@ -41,7 +41,7 @@ export default async function MovieDetailPage({ params }: { params: { id: string
 
   if (!movie) {
     return (
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen">
         <Header />
         <main className="container mx-auto px-4 py-8">
           <div className="text-center text-destructive mb-6">Movie not found</div>
@@ -54,7 +54,7 @@ export default async function MovieDetailPage({ params }: { params: { id: string
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Header />
       <main className="container mx-auto px-4 py-8">
         <Link href="/" className="mb-6 inline-block">
